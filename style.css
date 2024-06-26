@@ -371,6 +371,64 @@ section{
     margin-bottom: 1.5rem;
 }
 
+.more{
+    display: none;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: .2rem;
+}
+
+.tab-links{
+    margin-right: 5%;
+     font-size: 32px;
+     font-weight: 500;
+     cursor: pointer;
+     position: relative;
+     font-weight: 600;
+     font-size: 1.5rem;
+     margin-bottom: .2rem;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 60%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    color: #fdfdfd;
+    
+}
+.tab-contents ul li span{
+    color: var(--hover-color);
+    font-weight: 300;
+    font-size: 1.3rem;
+    margin-bottom: .2rem;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+    font-size: 18px;
+} 
+
+
 .info-about1,
 .info-about2,
 .info-about3{
@@ -411,60 +469,6 @@ section{
 }
 
 
-.more{
-   display: none;
-}
-
-.tab-titles{
-    display: flex;
-    margin: 20px 0;
-    
-}
-.tab-links {
-    margin-right: 50px;
-    font-size: 32px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: .2rem;
-}
-
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: var(--hover-color);
-    box-shadow: var(--neon-box-shadow);
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-.tab-links.active-link::after{
-    width: 60%;
-}
-
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-    color: #fdfdfd;
-    
-}
-.tab-contents ul li span{
-    color: var(--hover-color);
-    font-weight: 300;
-    font-size: 1.3rem;
-    margin-bottom: .2rem;
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-    font-size: 18px;
-}
 
 
 
@@ -594,20 +598,20 @@ section{
 }
 
 .skill-bar .bar .html{
-    width: 72%;
+    width: 70%;
     animation: html 2s;
 }
-.skill-bar .bar .figma{
+.skill-bar .bar .csharp{
     width: 90%;
-    animation: figma 3s;
+    animation: csharp 3s;
 }
 .skill-bar .bar .javascript{
-    width: 80%;
+    width: 60%;
     animation: javascript 4s;
 }
-.skill-bar .bar .css{
-    width: 62%;
-    animation: css 5s;
+.skill-bar .bar .sql{
+    width: 75%;
+    animation: sql 5s;
 }
 /*--------------Skills Right------------------------------------------------------*/
 
@@ -897,10 +901,10 @@ footer a i{
         width: 0%;
     }
     100%{
-        width: 72%;
+        width: 70%;
     }
 }
-@keyframes figma{
+@keyframes csharp{
     0%{
         width: 0%;
     }
@@ -913,15 +917,15 @@ footer a i{
         width: 0%;
     }
     100%{
-        width: 80%;
+        width: 60%;
     }
 }
-@keyframes css{
+@keyframes sql{
     0%{
         width: 0%;
     }
     100%{
-        width: 62%;
+        width: 75%;
     }
 }
 
@@ -958,6 +962,9 @@ footer a i{
     }
     section{
         padding: 50px 5%;
+    }
+    section .about-content .more .tab-titles{
+        display: inline-grid;
     }
     .navlist a{
         padding: 8px 15px;
