@@ -142,7 +142,7 @@ section{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
-    gap: 4em;
+    grid-gap: 4em;
 }
 
 .home-content{
@@ -306,13 +306,14 @@ section{
     position: relative;
 }
 
+
 .img-box{
     text-align: center;
 }
 
 .img-box img{
     width: 100%;
-    max-width: 450px;
+    max-width: 350px;
     height: auto;
 }
 
@@ -321,7 +322,8 @@ section{
     width: 100%;
     height: 100%;
     z-index: -1;
-    bottom: 20%;
+    top: -10%;
+    
 }
 
 .liquid-shape:nth-child(2){
@@ -448,18 +450,18 @@ section{
 }
 
 .info-about1{
-    left: 10%;
-    top: 34%;
+    left: 5%;
+    top: 37%;
 }
 
 .info-about2{
-    left: 66%;
+    left: 79%;
     top: 15%;
 }
 
 .info-about3{
     left: 61%;
-    top: 70%;
+    top: 80%;
 }
 
 .img-about span{
@@ -1021,6 +1023,7 @@ footer a i{
 
     .home-image{
         margin-bottom: 5rem;
+        
     }
 
     .liquid-shape{
@@ -1056,7 +1059,6 @@ footer a i{
     .filter-buttons .button{
         font-size: .8rem;
     }
-
     .img-about img{
         max-width: 300px;
     }
