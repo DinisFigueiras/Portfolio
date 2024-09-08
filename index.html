@@ -60,7 +60,7 @@
 
         <div class="home-image scroll-scale">
             <div class="img-box">
-                <img src="images/home-img.png" alt="">
+                <img src="images/teste4.png" alt="">
             </div>
 
             <div class="liquid-shape">
@@ -417,11 +417,11 @@
             <span>Ask me question</span>
             <h2>Contact Me</h2>
         </div>
-        <form action="#" class="scroll-bottom">
-            <input type="text" placeholder="Your name" required>
+        <form onsubmit="sendEmail(); reset(); return false;" class="scroll-bottom">
+            <input type="name" placeholder="Your name" required>
             <input type="email" placeholder="Your email" required>
-            <input type="number" placeholder="Phone number (Optional)">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+            <input type="phone" placeholder="Phone number (Optional)">
+            <textarea id="message" cols="30" rows="10" placeholder="Your message"></textarea>
             <div class="btn-box formBtn">
                 <button type="submit" class="btn">Send Message</button>
             </div>
@@ -436,6 +436,7 @@
 
     <script src="mixitup.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </body>
 </html>

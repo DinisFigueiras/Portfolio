@@ -156,3 +156,21 @@ scrollBottom.forEach((el)=> observer.observe(el));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el)=> observer.observe(el));
+
+/*-------------- CONTACT ------------------------------------------------------*/
+function sendEmail(){
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "noreply@dinisfigueiras.com",
+        Password : "07C382A5E0B3D46696043D03383C52598BD4",
+        To : 'mrkingames00@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact form [Portfolio]",
+        Body : "Name: " + document.getElementById("name").value
+            +  "<br> Email: " + document.getElementById("email").value
+            +  "<br> Phone: " + document.getElementById("phone").value
+            +  "<br> Email: " + document.getElementById("message").value
+    }).then(
+      message => alert("Message Sent Succesfully")
+    );
+}
